@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style media="screen">
+    body {
+      background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+      height: 1000px;
+    }
+
+    .test {
+      background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+      width: 400px;
+      height: 400px;
+    }
+
+    .lineBox {
+
+      position: fixed !important;
+
+      bottom: 60%;
+
+      right: 0px;
+
+      left: auto;
+
+      z-index: 999999;
+
+    }
+
+    .lineBox .lineItem {
+
+      cursor: pointer;
+
+      width: 50px;
+
+      height: 55px;
+
+      background: #2d8cf0;
+
+      margin-bottom: 1px;
+
+      color: #fff;
+
+      line-height: 55px;
+
+      text-align: center;
+
+      position: relative;
+
+    }
+
+    .lineItem .layui-icon {
+
+      font-size: 26px;
+
+    }
+
+    .lineItem:hover {
+
+      opacity: 0.8;
+
+    }
+
+    .lineTop {
+
+      margin-top: 4px;
+
+    }
+
+    .lineTip {
+
+      border-radius: 2px;
+
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
+
+      position: absolute;
+
+      top: 0px;
+
+      right: 59px;
+
+      color: #000;
+
+      padding: 0 10px;
+
+      background: #fff;
+
+      display: none;
+
+    }
+
+    .lineTip:before,
+    .lineTip:after {
+
+      content: "";
+
+      display: block;
+
+      position: absolute;
+
+      width: 0;
+
+      height: 0;
+
+      border: 8px solid transparent;
+
+      border-left-color: rgba(255, 255, 255, 1);
+
+      right: -16px;
+
+      top: 10px;
+
+      z-index: 1;
+
+    }
+
+
+
+    .lineTip:after {
+
+      right: -18px;
+
+      border-left-color: rgb(237, 237, 237);
+
+      z-index: 0;
+
+    }
+
+    .lineWechat {
+
+      width: 100px;
+
+      height: 100px;
+
+      padding: 0px;
+
+    }
+  </style>
+  <!-- <script src="https://whois.pconline.com.cn/ip.js"></script> -->
+</head>
+
+<body>
+  <div class="test">
+    111qwe123
+  </div>
+
+  <div class="lineBox">
+
+    <div class="lineItem">
+
+      <i class="layui-icon">&#xe606;</i>
+
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    var op = document.createElement("<div>222</div>");
+    // op.appendChild(oText);
+    document.body.appentCild(op);
+  </script>
+  <!-- <script>
+    $(function() {
+
+      $("#launchTopButton").click(function() {
+
+        $('body,html').scrollTop(0);
+
+      });
+
+      $(".lineItem").hover(function() {
+
+        $(".lineTip").hide();
+
+        $(this).find(".lineTip").show();
+
+      });
+
+    });
+  </script> -->
+
+<script>
+const para = document.createElement("div");
+const node = document.createTextNode('显示IP地址为 117.183.225.30 的位置信息,<span id="idJsShow"></span>');
+//const node1 = document.createElement('显示IP地址为 117.183.225.30 的位置信息,<span id="idJsShow"></span>');
+//para.appendChild(node);
+para.innerHTML = ('网站位置信息：<span id="idJsShow"></span>')
+para.style.position = "fixed";
+para.style.background = "#f6ff00";
+//para.style.width = "200px";
+para.style.bottom = "2%";
+para.style.right = "5px";
+para.style.left = "auto";
+document.body.appendChild(para)
+
+function jsShow(location){
+    document.getElementById("idJsShow").innerHTML = location;
+}
+
+</script>
+
+  <!-- ip_show = '显示IP地址为 117.183.225.30 的位置信息:<span id="idJsShow"></span>' -->
+<!-- <script>
+function jsShow(location){
+    document.getElementById("idJsShow").innerHTML = location;
+}
+</script> -->
+<script src="https://whois.pconline.com.cn/jsFunction.jsp?callback=jsShow&ip=8.8.8.8"></script>
+
+
+</body>
+
+</html>

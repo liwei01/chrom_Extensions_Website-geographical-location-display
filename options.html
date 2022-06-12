@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>网站地理位置实时显示设置</title>
+  <style media="screen">
+    #rcorners2 {
+      border-radius: 25px;
+      border: 2px solid #8AC007;
+      padding: 20px;
+      width: auto;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="rcorners2">
+    <h3>网站地理位置实时显示</h3>
+    <p>根据自己所在的位置来设置</p>
+    <p>这里只是查域名对应的ip,与系统的DNS无关，与用户上网无关，修改这里只会影响网站地理位置查询</p>
+    <p>httpdns设置</p>
+
+    <select id="btn_select">
+      <option value="https://doh.pub/dns-query?name=" >DNSPod DNS</option>
+      <option value="https://dns.twnic.tw/dns-query?name=" >台湾网络信息中心</option>
+      <!-- <option value="https://doh.pub/dns-query?name=" >Google Public DNS</option>
+      <option value="https://doh.pub/dns-query?name=" >Cloudflare DNS</option> -->
+    </select>
+
+    <button id="save" type="button" name="button">保存</button>
+    <div id="status"></div>
+</div>
+
+</body>
+<script src="options.js"></script>
+</html>
